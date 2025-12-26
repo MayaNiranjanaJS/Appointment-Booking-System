@@ -6,13 +6,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <button onclick="logout()">Logout</button>
-  
-  <h1>Welcome, Admin</h1>
-  
-  <h2>All Bookings</h2>
-  <ul id="allBookings"></ul>
+  <button class="logout-btn top-right" onclick="logout()">Logout</button>
+
+  <div class="page-content">
+    <div class="card">
+      <h1>Welcome, Admin</h1>
       
+      <div class="card-content">
+        <h2>Manage Bookings</h2>
+        <p>Below is a list of all bookings made by users:</p>
+        <h2>All Bookings</h2>
+        <ul id="allBookings"></ul>
+      </div>
+    </div>
+  </div>
   <script src="js/admin.js"></script>
 </body>
 </html>

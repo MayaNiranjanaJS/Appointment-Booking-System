@@ -8,11 +8,16 @@ if (!role || role !== "user") {
 const bookingForm = document.getElementById("bookingForm");
 const bookingList = document.getElementById("bookingList");
 const message = document.getElementById("bookingMessage");
+const navUsername = document.getElementById("navUsername");
 const username = localStorage.getItem("username");
 
 if (!username) {
   alert("Session expired. Please login again.");
   window.location.href = "index.html";
+}
+
+if (navUsername && username) {
+  navUsername.textContent = username;
 }
 
 // Submit new booking

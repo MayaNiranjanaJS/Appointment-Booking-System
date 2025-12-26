@@ -6,8 +6,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <button class="logout-btn top-right" onclick="logout()">Logout</button>
+  <nav class="navbar">
+  <div class="nav-left">Appointment Booking</div>
 
+  <div class="nav-right">
+    <span id="navUsername"></span>
+    <div class="profile-circle">👤</div>
+    <button class="logout-btn top-right" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+  <div class="page-content">
   <div class="card">
     <h1>Welcome, User</h1>
 
@@ -31,6 +40,7 @@
       <h2>Your Bookings</h2>
       <ul id="bookingList"></ul>
     </div>
+  </div>
   </div>
   <script src="js/user.js"></script>
 </body>
