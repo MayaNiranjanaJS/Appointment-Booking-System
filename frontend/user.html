@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard - Appointment Booking</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button class="logout-btn top-right" onclick="logout()">Logout</button>
+
+  <div class="card">
+    <h1>Welcome, User</h1>
+
+    <div class="card-content">
+      <h2>Create a Booking</h2>
+      <form id="bookingForm">
+        <label>
+          Service Type:
+          <select id="serviceType" required>
+            <option value="dental">Dental</option>
+            <option value="government">Government</option>
+          </select>
+        </label><br>
+        <label>Date: <input type="date" id="date" required></label><br>
+        <label>Time: <input type="time" id="time" required></label><br>
+        <button type="submit" class="primary-btn">Book Appointment</button>
+      </form>
+      
+      <p id="bookingMessage"></p>
+      
+      <h2>Your Bookings</h2>
+      <ul id="bookingList"></ul>
+    </div>
+  </div>
+  <script src="js/user.js"></script>
+</body>
+</html>

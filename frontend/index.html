@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Booking - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="app-title">Appointment Booking System</h1>
+    
+    <div class="card">
+      <!-- Toggle buttons -->
+      <div class="toggle-btns">
+        <button id="loginBtn" class="active">Login</button>
+        <button id="signupBtn">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+        <label>Username: <input type="text" id="username" required></label><br>
+        <label>Password: <input type="password" id="password" required></label><br>
+        <select id="role">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select><br>
+        <button type="submit">Login</button>
+        <p id="loginMessage"></p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" style="display:none;">
+        <label>Username: <input type="text" id="newUsername" required></label>
+        <label>Password: <input type="password" id="newPassword" required></label>
+        <select id="newRole">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit">Sign Up</button>
+        <p id="signupMessage"></p>
+      </form>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
