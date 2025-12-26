@@ -46,7 +46,7 @@ router.post("/", (req, res) => {
 router.delete("/:id", (req, res) => {
   const bookingId = Number(req.params.id);
 
-  const bookings = JSON.parse(fs.readFileSync(dataPath));
+  const bookings = JSON.parse(fs.readFileSync(dataPath,"utf-8"));
   const updatedBookings = bookings.filter(b => b.id !== bookingId);
 
   if (bookings.length === updatedBookings.length) {
