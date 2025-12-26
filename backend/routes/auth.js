@@ -13,7 +13,7 @@ router.post("/login", (req, res) => {
       ? path.join(__dirname, "../data/admins.json")
       : path.join(__dirname, "../data/users.json");
 
-  const users = JSON.parse(fs.readFileSync(file));
+  const users = JSON.parse(fs.readFileSync(file, "utf-8"));
 
   const found = users.find(
     (u) => u.username === username && u.password === password
