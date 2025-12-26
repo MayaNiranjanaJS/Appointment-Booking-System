@@ -63,7 +63,7 @@ bookingForm.addEventListener("submit", async (e) => {
 }
 
   try {
-    const res = await fetch("http://localhost:3000/booking", {
+    const res = await fetch("/api/booking", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bookingData)
@@ -89,7 +89,7 @@ bookingForm.addEventListener("submit", async (e) => {
 // Load all bookings for this user
 async function loadBookings() {
   try {
-    const res = await fetch("http://localhost:3000/booking");
+    const res = await fetch("/api/booking");
     const bookings = await res.json();
 
     // filter only current user's bookings

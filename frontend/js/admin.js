@@ -10,7 +10,7 @@ const allBookingsList = document.getElementById("allBookings");
 // Load all bookings from backend
 async function loadAllBookings() {
   try {
-    const res = await fetch("http://localhost:3000/booking");
+    const res = await fetch("/api/booking");
     const bookings = await res.json();
 
     allBookingsList.innerHTML = "";
@@ -42,7 +42,7 @@ async function deleteBooking(id) {
   if (!confirmDelete) return;
 
   try {
-    const res = await fetch(`http://localhost:3000/booking/${id}`, {
+    const res = await fetch(`/api/booking/${id}`, {
       method: "DELETE"
     });
 
