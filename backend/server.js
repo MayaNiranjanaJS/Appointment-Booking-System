@@ -22,6 +22,12 @@ app.get("/", (req, res) => {
   res.send("Appointment Booking Backend is running 🚀");
 });
 
+app.get("/api/test", (req, res) => {
+  res.json({
+    message: "API is working fine 🚀"
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
